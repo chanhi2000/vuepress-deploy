@@ -1,5 +1,6 @@
 [English](./README.md) | 简体中文
-# vuepress-deploy ![visitor badge](https://count.jenkey2011.xyz/badge?id=jenkey2011.vuepress-deploy&label=page%20viewed)
+
+# vuepress-deploy
 
 自动构建、部署`vuepress`应用到Github Pages，自由设置仓库、分支
 
@@ -8,6 +9,7 @@
 QQ群: 742434216
 
 ## 使用
+
 在你项目仓库`.github/workflows`目录下创建一个 `.yml`文件，举例：`vuepress-deploy.yml`。
 
 内容：
@@ -31,6 +33,7 @@ jobs:
         BUILD_SCRIPT: yarn && yarn build
         BUILD_DIR: blog/.vuepress/dist/
 ```
+
 上述配置的结果是：每次推送代码，将自动构建、部署到`username/repo`的`master`分支。就是这么简单~
 
 ## 示例
@@ -76,6 +79,7 @@ jobs:
 | `BUILD_DIR` | 构建产物的目录 例： `blog/.vuepress/dist/` | `env` | **是** |
 | `COMMIT_MESSAGE` | 自动部署时的提交信息 例： `Auto deploy from Github Actions` | `env` | **否** |
 | `CNAME` | Github Pages 站点别名 | `env` | **否** |
+
 ## 详细教程
 
 ### 创建token

@@ -1,5 +1,7 @@
 English | [简体中文](./README.zh-CN.md)
-# vuepress-deploy ![visitor badge](https://count.jenkey2011.xyz/badge?id=jenkey2011.vuepress-deploy&label=page%20viewed)
+
+# vuepress-deploy
+
 A GitHub Action to build and deploy Vuepress sites to GitHub Pages
 
 Telegram Group: [https://t.me/joinchat/Cz9TxNMrjIs3OWQ1](https://t.me/joinchat/Cz9TxNMrjIs3OWQ1)
@@ -7,6 +9,7 @@ Telegram Group: [https://t.me/joinchat/Cz9TxNMrjIs3OWQ1](https://t.me/joinchat/C
 QQ Group: 742434216
 
 ## Usage
+
 Create `vuepress-deploy.yml` in the `.github/workflows` directory in the root of your repository.
 
 ```yml
@@ -20,7 +23,7 @@ jobs:
       uses: actions/checkout@master
 
     - name: vuepress-deploy
-      uses: jenkey2011/vuepress-deploy@master
+      uses: chanhi20000/vuepress-deploy@master
       env:
         ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
         TARGET_REPO: username/repo
@@ -31,7 +34,8 @@ jobs:
 
 The action will auto deploy the vuepress project when you push your code. Enjoy!!!
 
-## Demo 
+## Demo
+
 see: [https://github.com/jenkey2011/vuepress-deploy-demo](https://github.com/jenkey2011/vuepress-deploy-demo)
 
 ## Detail
@@ -61,7 +65,6 @@ There are three situations. Each situation corresponds to a deployment file.
 
 > Step-by-Step Guide , please see the [Step-by-Step](#step-by-step-guide)
 
-
 ## Parameters
 
 |  Parameter |  Description | Type | Required
@@ -75,7 +78,6 @@ There are three situations. Each situation corresponds to a deployment file.
 | `COMMIT_MESSAGE` | The commit message supplied when pushing new changes e.g.: `Auto deploy from Github Actions` | `env` | **No** |
 | `CNAME` | Alias Record of your site. | `env` | **No** |
 
-
 ## Step-by-Step Guide
 
 ### Create a personal access token
@@ -87,6 +89,7 @@ click your profile icon > Settings > Developer settings > Personal access tokens
 Under your repository name, click  Settings > Secrets > Type `ACCESS_TOKEN` in the "Name" input box && the the personal access token as value.
 
 ### Create a workflow file
+
 If you repo doesn't already have one, create a workflow file. You must store workflows in the `.github/workflows` directory in the root of your repository.
 
 In `.github/workflows`, add a `.yml` or `.yaml` file for your workflow. For example, `.github/workflows/vuepress-deploy.yml`.
