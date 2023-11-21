@@ -1,4 +1,6 @@
 {
+  "version": "0.0.2",
+  "private": true,
   "name": "vuepress-deploy",
   "description": "A GitHub Action to build and deploy Vuepress sites to GitHub Pages",
   "license": "MIT",
