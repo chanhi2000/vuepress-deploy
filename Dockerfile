@@ -1,4 +1,4 @@
-FROM node:18.18.2-slim as base
+FROM node:20.17.0-slim as base
 
 LABEL "com.github.actions.name"="Vuepress deploy"
 LABEL "com.github.actions.description"="A GitHub Action to build and deploy Vuepress sites to GitHub Pages"
